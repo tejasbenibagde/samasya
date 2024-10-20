@@ -1,0 +1,8 @@
+src/
+tests/
+.husky/
+.eslintrc.js
+.prettierrc
+jest.config.js
+tsconfig.json
+.gitignore

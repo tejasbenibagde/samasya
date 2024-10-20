@@ -1,0 +1,44 @@
+{
+  "name": "samasya",
+  "version": "0.1.0",
+  "description": "A TypeScript-based mathematical library inspired by math.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": ["math", "mathematics", "typescript"],
+  "author": "Tejas Benibagde",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tejasbenibagde/samasya"
+  },
+  "bugs": {
+    "url": "https://github.com/tejasbenibagde/samasya/issues"
+  },
+  "homepage": "https://github.com/tejasbenibagde/samasya#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "husky": "^7.0.0",
+    "jest": "^27.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.0.0",
+    "ts-jest": "^27.0.0",
+    "typescript": "^4.0.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
