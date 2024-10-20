@@ -39,6 +39,15 @@
     "*.ts": [
       "prettier --write",
       "eslint --fix"
+    ],
+    "*.{js,ts}": [
+      "npm run build",
+      "npm test"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
