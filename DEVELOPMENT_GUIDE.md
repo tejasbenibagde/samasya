@@ -20,15 +20,15 @@ This guide outlines the step-by-step process for developing the Samasya library,
 
 ## 1. Project Setup
 
-- [ ] Initialize a new npm project
-- [ ] Set up TypeScript configuration
-- [ ] Configure linting and formatting tools (ESLint, Prettier)
-- [ ] Set up a build process (e.g., using tsc or a bundler like webpack)
-- [ ] Configure testing framework (e.g., Jest)
+- ✅ Initialize a new npm project
+- ✅ Set up TypeScript configuration
+- ✅ Configure linting and formatting tools (ESLint, Prettier)
+- ✅ Set up a build process (e.g., using tsc or a bundler like webpack)
+- ✅ Configure testing framework (e.g., Jest)
 
 ## 2. Core Functionality
 
-- [ ] Implement basic arithmetic operations (add, subtract, multiply, divide)
+- ✅ Implement basic arithmetic operations (add, subtract, multiply, divide)
 - [ ] Create utility functions for type checking and conversion
 - [ ] Implement common mathematical constants (pi, e, etc.)
 - [ ] Add basic trigonometric functions (sin, cos, tan)
@@ -121,4 +121,4 @@ This guide outlines the step-by-step process for developing the Samasya library,
 - [ ] Publish the initial version to npm
 - [ ] Set up a changelog to track versions and updates
 
-Remember to update this guide as you progress through the development of your Samasya library. Good luck with your project!
+
