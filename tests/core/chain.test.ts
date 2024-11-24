@@ -24,7 +24,7 @@ describe('Chainable Arithmetic Operations', () => {
   // Edge cases
   test('chain with floating-point precision', () => {
     const chain = new Chain(0.1);
-    expect(chain.add(0.2).getResult()).toBeCloseTo(0.3, 5); 
+    expect(chain.add(0.2).getResult()).toBeCloseTo(0.3, 5);
   });
 
   test('chain with large numbers', () => {

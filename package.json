@@ -1,6 +1,6 @@
 {
   "name": "samasya",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A TypeScript-based mathematical library inspired by math.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

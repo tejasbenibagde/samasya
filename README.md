@@ -4,16 +4,15 @@ Samasya is a TypeScript-based mathematical library inspired by math.js, designed
 
 ## Features
 
-- Basic arithmetic operations
-- Advanced mathematical functions (coming soon)
-- Expression parsing and evaluation (coming soon)
-- Unit conversions (coming soon)
-- Matrix and vector operations (coming soon)
-- Complex number support (coming soon)
-- Statistical functions (coming soon)
-- Symbolic computation (coming soon)
-
-
+- Basic arithmetic operations (`addition`, `subtraction`, `multiplication`, `division`)
+- Support for both `numbers` and `arrays` in arithmetic operations
+- `Chainable` arithmetic operations for streamlined calculations
+- Expression parsing and evaluation **_(coming soon)_**
+- Unit conversions **_(coming soon)_**
+- Matrix and vector operations **_(coming soon)_**
+- Complex number support **_(coming soon)_**
+- Statistical functions **_(coming soon)_**
+- Symbolic computation **_(coming soon)_**
 
 ## Installation
 
@@ -25,45 +24,77 @@ npm install samasya
 
 ## Usage
 
-Here's a basic example of how to use Samasya:
+### Basic Arithmetic Operations
+
+Samasya supports the following basic arithmetic operations with both individual numbers and arrays of numbers:
 
 ```typescript
-typescript
 import { add, multiply, divide, subtract } from 'samasya';
+
+// Using two numbers
 console.log(add(2, 3)); // Output: 5
 console.log(multiply(4, 5)); // Output: 20
 console.log(divide(10, 2)); // Output: 5
 console.log(subtract(7, 3)); // Output: 4
+
+// Using an array of numbers
+console.log(add([1, 2, 3, 4])); // Output: 10
+console.log(multiply([2, 3, 4])); // Output: 24
+console.log(subtract([10, 2, 1])); // Output: 7
+console.log(divide([100, 2, 5])); // Output: 10
 ```
 
+### Chaining Arithmetic Operations
+
+Samasya supports chaining arithmetic operations for more complex calculations. Here's how you can chain operations:
+
+```typescript
+import { Chain } from 'samasya';
+
+const result = new Chain(5).add(3).multiply(2).subtract(4).divide(2).getResult();
+
+console.log(result); // Output: 6
+```
+
+In this example, 5 + 3 = 8, then 8 \* 2 = 16, then 16 - 4 = 12, and finally 12 / 2 = 6.
 
 ## API Reference
 
-Currently, Samasya supports the following basic arithmetic operations:
+### Basic Arithmetic Operations
 
-- `add(a: number, b: number): number`
-- `subtract(a: number, b: number): number`
-- `multiply(a: number, b: number): number`
-- `divide(a: number, b: number): number`
+- `add(a: number | number[], b?: number): number`
+- `subtract(a: number | number[], b?: number): number`
+- `multiply(a: number | number[], b?: number): number`
+- `divide(a: number | number[], b?: number): number`
 
-More functions will be added in future releases.
+### Chaining Class
+
+- `Chain(value: number): Initializes a chainable arithmetic value.`
+- `.add(value: number): Adds a number to the current value.`
+- `.subtract(value: number): Subtracts a number from the current value.`
+- `.multiply(value: number): Multiplies the current value by a number.`
+- `.divide(value: number): Divides the current value by a number.`
+- `.getResult(): Returns the final value after all operations.`
 
 ## Development
 
 To set up the project for development:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/tejasbenibagde/samasya.git
    cd samasya
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Run tests:
+
    ```bash
    npm test
    ```
