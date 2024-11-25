@@ -68,7 +68,7 @@ describe('Chainable Arithmetic Operations', () => {
     const chain = new Chain(1);
     expect(
       chain.add(2).multiply(3).subtract(4).divide(2).add(10).power(2).root(2).getResult()
-    ).toBe(12.5); 
+    ).toBe(12.5);
   });
 
   // Division by zero handling
