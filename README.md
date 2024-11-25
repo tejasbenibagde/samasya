@@ -56,7 +56,7 @@ const result = new Chain(5).add(3).multiply(2).subtract(4).divide(2).getResult()
 console.log(result); // Output: 6
 ```
 
-In this example, 5 + 3 = 8, then 8 \* 2 = 16, then 16 - 4 = 12, and finally 12 / 2 = 6.
+In this example, `5 + 3 = 8`, then `8 \* 2 = 16`, then `16 - 4 = 12`, and finally `12 / 2 = 6`.
 
 ## API Reference
 
