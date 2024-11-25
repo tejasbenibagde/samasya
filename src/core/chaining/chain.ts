@@ -64,6 +64,31 @@ class Chain {
    * Gets the result of the chain.
    * @returns The current value of the chain.
    */
+
+  /**
+   * Raises the current value to a specified power.
+   * @param exponent - The power to raise the value to.
+   * @returns A new `Chain` instance with the updated value.
+   */
+  power(exponent: number): Chain {
+    this.validateNumber(exponent, 'power');
+    return new Chain(Math.pow(this.value, exponent));
+  }
+
+  /**
+   * Finds the nth root of the current value.
+   * @param root - The degree of the root.
+   * @returns A new `Chain` instance with the updated value.
+   * @throws Error if the root is zero.
+   */
+  root(root: number): Chain {
+    if (root === 0) {
+      throw new Error('Root cannot be zero.');
+    }
+    this.validateNumber(root, 'root');
+    return new Chain(Math.pow(this.value, 1 / root));
+  }
+
   getResult(): number {
     return this.value;
   }

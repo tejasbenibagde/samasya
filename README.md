@@ -1,12 +1,40 @@
 # Samasya
 
+[![NPM Version](https://img.shields.io/npm/v/samasya)](https://www.npmjs.com/package/samasya)
+[![License](https://img.shields.io/npm/l/samasya)](https://github.com/tejasbenibagde/samasya/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/npm/dt/samasya)](https://www.npmjs.com/package/samasya)
+
+
 Samasya is a TypeScript-based mathematical library inspired by math.js, designed to provide a comprehensive set of mathematical functions and utilities for JavaScript and TypeScript projects.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Basic Arithmetic Operations](#basic-arithmetic-operations)
+  - [Modular Arithmetic Operations](#modular-arithmetic-operations)
+  - [Power and Roots Operations](#power-and-roots)
+  - [Chaining Arithmetic Operations](#chaining-arithmetic-operations)
+- [API Reference](#api-reference)
+  - [Basic Arithmetic Operations](#basic-arithmetic-operations)
+  - [Modular Arithmetic Operations](#modular-arithmetic-operations)
+  - [Chaining Class](#chaining-class)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+- [Support](#support)
+- [Acknowledgements](#acknowledgements)
+- [Roadmap](#roadmap)
 
 ## Features
 
 - Basic arithmetic operations (`addition`, `subtraction`, `multiplication`, `division`)
+- Modular arithmetic operations (`modulo`, `modAdd`, `modMultiply`, `modExp`)
 - Support for both `numbers` and `arrays` in arithmetic operations
 - `Chainable` arithmetic operations for streamlined calculations
+- **Power** and **Root** operations for exponentiation and root calculations
 - Expression parsing and evaluation **_(coming soon)_**
 - Unit conversions **_(coming soon)_**
 - Matrix and vector operations **_(coming soon)_**
@@ -43,10 +71,60 @@ console.log(multiply([2, 3, 4])); // Output: 24
 console.log(subtract([10, 2, 1])); // Output: 7
 console.log(divide([100, 2, 5])); // Output: 10
 ```
+### Modular Arithmetic Operations
+
+Samasya now supports modular arithmetic operations for handling operations within a modulus. Here's how you can use these functions:
+
+``` typescript
+import { modulo, modAdd, modMultiply, modExp } from 'samasya';
+
+// Basic modulo operation
+console.log(modulo(10, 3)); // Output: 1
+console.log(modulo(-10, 3)); // Output: 2
+
+// Modular addition
+console.log(modAdd(5, 7, 6)); // Output: 0 ( (5 + 7) % 6 )
+
+// Modular multiplication
+console.log(modMultiply(5, 7, 6)); // Output: 5 ( (5 * 7) % 6 )
+
+// Modular exponentiation
+console.log(modExp(2, 10, 1000)); // Output: 24 ( (2^10) % 1000 )
+```
+### Power and Roots
+
+Samasya supports power and root calculations:
+
+#### Power
+
+The `power` function raises a base number to a specified exponent.
+
+```typescript
+import { power } from 'samasya';
+
+console.log(power(2, 3)); // Output: 8 (2^3 = 8)
+console.log(power(5, 0)); // Output: 1 (Any number^0 = 1)
+console.log(power(3, -2)); // Output: 0.111... (~1/9)
+```
+#### Roots
+
+The `root` function calculates the nth root of a number.
+
+``` typescript
+import { root } from 'samasya';
+
+console.log(root(9, 2)); // Output: 3 (Square root of 9)
+console.log(root(27, 3)); // Output: 3 (Cube root of 27)
+console.log(root(16, 4)); // Output: 2 (Fourth root of 16)
+console.log(root(16, -2)); // Output: 0.25 (Inverse square root)
+```
+- Edge Cases:
+   - If `root` is `0`, the function throws an error: `"Root cannot be zero."`
+
 
 ### Chaining Arithmetic Operations
 
-Samasya supports chaining arithmetic operations for more complex calculations. Here's how you can chain operations:
+- Samasya supports chaining arithmetic operations for more complex calculations. Here's how you can chain operations:
 
 ```typescript
 import { Chain } from 'samasya';
@@ -58,6 +136,18 @@ console.log(result); // Output: 6
 
 In this example, `5 + 3 = 8`, then `8 \* 2 = 16`, then `16 - 4 = 12`, and finally `12 / 2 = 6`.
 
+- You can also chain power and root operations:
+
+```typescript
+import { Chain } from 'samasya';
+
+const powerResult = new Chain(2).power(3).getResult();
+console.log(powerResult); // Output: 8 (2^3)
+
+const rootResult = new Chain(16).root(4).getResult();
+console.log(rootResult); // Output: 2 (Fourth root of 16)
+```
+
 ## API Reference
 
 ### Basic Arithmetic Operations
@@ -67,6 +157,17 @@ In this example, `5 + 3 = 8`, then `8 \* 2 = 16`, then `16 - 4 = 12`, and finall
 - `multiply(a: number | number[], b?: number): number`
 - `divide(a: number | number[], b?: number): number`
 
+### Modular Arithmetic Operations
+
+- `modulo(a: number, b: number)`: number - Calculates the remainder when `a` is divided by `b`, handling negative numbers correctly.
+- `modAdd(a: number, b: number, mod: number)`: number - Adds `a` and `b`, then takes modulo `mod`.
+- `modMultiply(a: number, b: number, mod: number)`: number - Multiplies `a` and `b`, then takes modulo `mod`.
+- `modExp(base: number, exp: number, mod: number)`: number - Efficiently calculates `(base^exp) % mod`.
+
+### Power and Root Operations
+- `power(base: number, exponent: number): number` - Raises `base` to the power of `exponent`.
+- `root(value: number, n: number): number` - Calculates the nth root of `value`. Throws an error if `n` is 0.
+
 ### Chaining Class
 
 - `Chain(value: number): Initializes a chainable arithmetic value.`
@@ -74,6 +175,8 @@ In this example, `5 + 3 = 8`, then `8 \* 2 = 16`, then `16 - 4 = 12`, and finall
 - `.subtract(value: number): Subtracts a number from the current value.`
 - `.multiply(value: number): Multiplies the current value by a number.`
 - `.divide(value: number): Divides the current value by a number.`
+- `.power(exponent: number): Raises the current value to the specified exponent.`
+- `.root(nthRoot: number): Calculates the nth root of the current value.`
 - `.getResult(): Returns the final value after all operations.`
 
 ## Development

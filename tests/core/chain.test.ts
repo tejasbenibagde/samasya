@@ -37,6 +37,27 @@ describe('Chainable Arithmetic Operations', () => {
     expect(chain.add(1e-10).getResult()).toBeCloseTo(2e-10, 10);
   });
 
+  // Power and root operations
+  test('chain with power operation', () => {
+    const chain = new Chain(2);
+    expect(chain.power(3).getResult()).toBe(8);
+  });
+
+  test('chain with root operation', () => {
+    const chain = new Chain(27);
+    expect(chain.root(3).getResult()).toBe(3); // Cube root of 27
+  });
+
+  test('chain with combined power and root operations', () => {
+    const chain = new Chain(16);
+    expect(chain.root(2).power(4).getResult()).toBe(256); // ((Square root of 16)^4)
+  });
+
+  test('chain with invalid root (zero)', () => {
+    const chain = new Chain(10);
+    expect(() => chain.root(0)).toThrow('Root cannot be zero.');
+  });
+
   // Extended scenarios
   test('chain with multiple operations', () => {
     const chain = new Chain(5);
@@ -45,9 +66,9 @@ describe('Chainable Arithmetic Operations', () => {
 
   test('chain with a long chain of operations', () => {
     const chain = new Chain(1);
-    expect(chain.add(2).multiply(3).subtract(4).divide(2).add(10).multiply(5).getResult()).toBe(
-      62.5
-    );
+    expect(
+      chain.add(2).multiply(3).subtract(4).divide(2).add(10).power(2).root(2).getResult()
+    ).toBe(12.5); 
   });
 
   // Division by zero handling
@@ -83,5 +104,16 @@ describe('Chainable Arithmetic Operations', () => {
   test('chain with only division', () => {
     const chain = new Chain(100);
     expect(chain.divide(2).divide(5).getResult()).toBe(10);
+  });
+
+  // Chaining only power and root
+  test('chain with only power', () => {
+    const chain = new Chain(3);
+    expect(chain.power(2).power(3).getResult()).toBe(729); // 3^2^3
+  });
+
+  test('chain with only roots', () => {
+    const chain = new Chain(256);
+    expect(chain.root(2).root(2).getResult()).toBe(4); // Square root twice
   });
 });
