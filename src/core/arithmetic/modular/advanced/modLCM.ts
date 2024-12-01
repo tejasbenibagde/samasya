@@ -14,12 +14,19 @@ export function modLCM(a: number, b: number, mod: number): number {
     throw new Error('Modulus must be greater than 0');
   }
 
+  // Normalize inputs to [0, mod-1]
+  a = ((a % mod) + mod) % mod;
+  b = ((b % mod) + mod) % mod;
+
   // Calculate GCD
   const gcd = modGCD(a, b);
 
-  // Compute LCM using the formula: LCM(a, b) = |a * b| / GCD(a, b)
-  // Apply modulus during calculation to avoid overflow
-  const lcm = ((Math.abs(a) / gcd) * Math.abs(b)) % mod;
+  if (gcd === 0) {
+    throw new Error('GCD is zero, cannot compute LCM');
+  }
+
+  // Compute LCM using modular arithmetic
+  const lcm = ((Math.abs(a) % mod) * (Math.abs(b) / gcd)) % mod;
 
   return lcm;
 }

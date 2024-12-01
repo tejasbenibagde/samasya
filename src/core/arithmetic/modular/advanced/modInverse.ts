@@ -1,4 +1,5 @@
-import { modulo } from '../basic/modulo';
+import { modGCD } from './modGCD'; // Import the GCD function
+
 /**
  * Finds the modular inverse of a number using the Extended Euclidean Algorithm.
  * @param a - The number to find the inverse of
@@ -7,14 +8,21 @@ import { modulo } from '../basic/modulo';
  * @throws Error if the modular inverse does not exist
  */
 function modInverse(a: number, mod: number): number {
-  let m0 = mod;
+  if (mod === 1) {
+    return 0; // In modular arithmetic with mod = 1, any number's inverse is 0
+  }
+
+  // Ensure a is within the range of mod
+  a = ((a % mod) + mod) % mod; // Adjust negative numbers
+
+  // Check if a and mod are coprime (i.e., gcd(a, mod) should be 1)
+  if (modGCD(a, mod) !== 1) {
+    throw new Error('Modular inverse does not exist (a and mod are not coprime).');
+  }
+
+  const m0 = mod;
   let x0 = 0;
   let x1 = 1;
-
-  a = modulo(a, mod);
-  if (a === 0) {
-    throw new Error('Modular inverse does not exist (a is divisible by mod).');
-  }
 
   while (a > 1) {
     const q = Math.floor(a / mod);
