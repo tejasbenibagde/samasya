@@ -4,7 +4,6 @@
 [![License](https://img.shields.io/npm/l/samasya)](https://github.com/tejasbenibagde/samasya/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/npm/dt/samasya)](https://www.npmjs.com/package/samasya)
 
-
 Samasya is a TypeScript-based mathematical library inspired by math.js, designed to provide a comprehensive set of mathematical functions and utilities for JavaScript and TypeScript projects.
 
 ## Table of Contents
@@ -30,17 +29,11 @@ Samasya is a TypeScript-based mathematical library inspired by math.js, designed
 
 ## Features
 
-- Basic arithmetic operations (`addition`, `subtraction`, `multiplication`, `division`)
-- Modular arithmetic operations (`modulo`, `modAdd`, `modMultiply`, `modExp`)
-- Support for both `numbers` and `arrays` in arithmetic operations
-- `Chainable` arithmetic operations for streamlined calculations
-- **Power** and **Root** operations for exponentiation and root calculations
-- Expression parsing and evaluation **_(coming soon)_**
-- Unit conversions **_(coming soon)_**
-- Matrix and vector operations **_(coming soon)_**
-- Complex number support **_(coming soon)_**
-- Statistical functions **_(coming soon)_**
-- Symbolic computation **_(coming soon)_**
+- **Basic Arithmetic Operations:** Addition, subtraction, multiplication, and division for both numbers and arrays.
+- **Modular Arithmetic Operations:** Operations such as modulo, modular addition, subtraction, multiplication, exponentiation, and more.
+- **Power and Root Calculations:** Compute powers and nth roots of numbers.
+- **Chaining Operations:** Chain multiple arithmetic operations in a fluent API style.
+- **Error Handling:** Comprehensive error handling for invalid inputs and edge cases.
 
 ## Installation
 
@@ -71,11 +64,12 @@ console.log(multiply([2, 3, 4])); // Output: 24
 console.log(subtract([10, 2, 1])); // Output: 7
 console.log(divide([100, 2, 5])); // Output: 10
 ```
+
 ### Modular Arithmetic Operations
 
 Samasya now supports modular arithmetic operations for handling operations within a modulus. Here's how you can use these functions:
 
-``` typescript
+```typescript
 import { modulo, modAdd, modMultiply, modExp } from 'samasya';
 
 // Basic modulo operation
@@ -91,6 +85,7 @@ console.log(modMultiply(5, 7, 6)); // Output: 5 ( (5 * 7) % 6 )
 // Modular exponentiation
 console.log(modExp(2, 10, 1000)); // Output: 24 ( (2^10) % 1000 )
 ```
+
 ### Power and Roots
 
 Samasya supports power and root calculations:
@@ -106,11 +101,12 @@ console.log(power(2, 3)); // Output: 8 (2^3 = 8)
 console.log(power(5, 0)); // Output: 1 (Any number^0 = 1)
 console.log(power(3, -2)); // Output: 0.111... (~1/9)
 ```
+
 #### Roots
 
 The `root` function calculates the nth root of a number.
 
-``` typescript
+```typescript
 import { root } from 'samasya';
 
 console.log(root(9, 2)); // Output: 3 (Square root of 9)
@@ -118,9 +114,9 @@ console.log(root(27, 3)); // Output: 3 (Cube root of 27)
 console.log(root(16, 4)); // Output: 2 (Fourth root of 16)
 console.log(root(16, -2)); // Output: 0.25 (Inverse square root)
 ```
-- Edge Cases:
-   - If `root` is `0`, the function throws an error: `"Root cannot be zero."`
 
+- Edge Cases:
+  - If `root` is `0`, the function throws an error: `"Root cannot be zero."`
 
 ### Chaining Arithmetic Operations
 
@@ -156,17 +152,21 @@ console.log(rootResult); // Output: 2 (Fourth root of 16)
 - `subtract(a: number | number[], b?: number): number`
 - `multiply(a: number | number[], b?: number): number`
 - `divide(a: number | number[], b?: number): number`
+- `power(base: number, exponent: number): number` - Raises `base` to the power of `exponent`.
+- `root(value: number, n: number): number` - Calculates the nth root of `value`. Throws an error if `n` is 0.
 
 ### Modular Arithmetic Operations
 
-- `modulo(a: number, b: number)`: number - Calculates the remainder when `a` is divided by `b`, handling negative numbers correctly.
-- `modAdd(a: number, b: number, mod: number)`: number - Adds `a` and `b`, then takes modulo `mod`.
-- `modMultiply(a: number, b: number, mod: number)`: number - Multiplies `a` and `b`, then takes modulo `mod`.
-- `modExp(base: number, exp: number, mod: number)`: number - Efficiently calculates `(base^exp) % mod`.
-
-### Power and Root Operations
-- `power(base: number, exponent: number): number` - Raises `base` to the power of `exponent`.
-- `root(value: number, n: number): number` - Calculates the nth root of `value`. Throws an error if `n` is 0.
+- `modulo(a: number, b: number): number`
+- `modAdd(a: number, b: number, mod: number): number`
+- `modSubtract(a: number, b: number, mod: number): number`
+- `modMultiply(a: number, b: number, mod: number): number`
+- `modDivide(a: number, b: number, mod: number): number`
+- `modExp(base: number, exponent: number, mod: number): number`
+- `modRoot(value: number, n: number, mod: number): number`
+- `modGCD(a: number, b: number): number`
+- `modLCM(a: number, b: number): number`
+- `modInverse(a: number, mod: number): number`
 
 ### Chaining Class
 
@@ -229,7 +229,6 @@ This project is inspired by [math.js](https://mathjs.org/). We're grateful to th
 
 ## Roadmap
 
-- Implement advanced mathematical functions
 - Add expression parsing and evaluation
 - Develop unit conversion capabilities
 - Implement matrix and vector operations
