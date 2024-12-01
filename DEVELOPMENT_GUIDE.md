@@ -98,8 +98,8 @@ This guide outlines the step-by-step process for developing the Samasya library,
 
 ## 11. Testing
 
-- [ ] Write unit tests for all core functions
-- [ ] Implement integration tests for complex operations
+- ✅ Write unit tests for all core functions
+- ✅ Implement integration tests for complex operations
 - [ ] Add performance benchmarks
 - [ ] Ensure high test coverage (aim for >90%)
 - [ ] Set up continuous integration (CI) for automated testing
@@ -114,11 +114,11 @@ This guide outlines the step-by-step process for developing the Samasya library,
 
 ## 13. Publishing
 
-- [ ] Choose an appropriate open-source license
-- [ ] Set up npm package configuration
-- [ ] Create a comprehensive README.md
-- [ ] Add contribution guidelines
-- [ ] Publish the initial version to npm
-- [ ] Set up a changelog to track versions and updates
+- ✅ Choose an appropriate open-source license
+- ✅ Set up npm package configuration
+- ✅ Create a comprehensive README.md
+- ✅ Add contribution guidelines
+- ✅ Publish the initial version to npm
+- ✅ Set up a changelog to track versions and updates
 
 
