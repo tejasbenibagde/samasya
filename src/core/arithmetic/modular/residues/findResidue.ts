@@ -6,11 +6,11 @@
  * @throws Will throw an error if `mod` is not a positive number.
  */
 function findResidue(a: number, mod: number): number {
-    if (mod <= 0 || !Number.isFinite(mod)) {
-        throw new Error("The modulus must be a positive finite number.");
-    }
-    const residue = ((a % mod) + mod) % mod;
-    return residue;
+  if (mod <= 0 || !Number.isFinite(mod)) {
+    throw new Error('The modulus must be a positive finite number.');
+  }
+  const residue = ((a % mod) + mod) % mod;
+  return residue;
 }
 
 export { findResidue };
