@@ -50,18 +50,18 @@ Example: modLCM(4, 6, 5) => 4
 4. Residue Classes and Operations
 These functions work with equivalence classes of numbers under a modulus:
 
-isCoprime(a, b): boolean
+✅ isCoprime(a, b): boolean
 Checks if a and b are coprime (i.e., GCD(a, b) == 1).
 
-findResidue(a, mod): number
+✅ findResidue(a, mod): number
 Maps a to its residue class modulo mod.
 Example: findResidue(-10, 3) => 2 (since -10 ≡ 2 (mod 3))
 
-totient(n): number
+✅ totient(n): number
 Computes Euler’s Totient Function, which gives the count of numbers coprime to n.
 Example: totient(9) => 6 (1, 2, 4, 5, 7, 8 are coprime to 9).
 
-5. Chinese Remainder Theorem (CRT)
+✅ 5. Chinese Remainder Theorem (CRT)
 Special functions for working with systems of modular equations:
 
 solveCRT(remainders: number[], moduli: number[]): number
@@ -74,6 +74,7 @@ x ≡ 2 (mod 3)
 x ≡ 3 (mod 5)  
 x ≡ 2 (mod 7)  
 Output: x = 23
+
 6. Prime and Factorial Functions
 These deal with primes or factorial operations under modular constraints:
 

@@ -4,7 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.1.0-beta.2]  - 2024-12-01
+## [1.1.0-beta.3] - 2024-12-08
+
+### Added
+
+- **Residue Classes and Operations**:
+  - `isCoprime(a: number, b: number): boolean`: Checks if `a` and `b` are coprime (i.e., GCD(a, b) == 1).
+  - `findResidue(a: number, mod: number): number`: Maps `a` to its residue class modulo `mod`. Example: `findResidue(-10, 3) => 2` (since -10 ≡ 2 (mod 3)).
+  - `totient(n: number): number`: Computes Euler’s Totient Function, which gives the count of numbers coprime to `n`. Example: `totient(9) => 6` (1, 2, 4, 5, 7, 8 are coprime to 9).
+
+## [1.1.0-beta.2] - 2024-12-01
 
 ### Added
 

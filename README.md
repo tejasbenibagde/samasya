@@ -167,6 +167,9 @@ console.log(rootResult); // Output: 2 (Fourth root of 16)
 - `modGCD(a: number, b: number): number`
 - `modLCM(a: number, b: number): number`
 - `modInverse(a: number, mod: number): number`
+- `isCoprime(a: number, mod: number): boolean`
+- `findResidue(a: number, mod: number): number`
+- `totient(a: number): number`
 
 ### Chaining Class
 
