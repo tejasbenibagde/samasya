@@ -9,12 +9,14 @@ import { validateNumber } from '../../utils';
  */
 function add(a: number | number[], b?: number): number {
   if (Array.isArray(a)) {
-    a.forEach((num) => validateNumber(num, 'add'));
+    if (a.length === 0) {
+      throw new Error('Input array must not be empty.');
+    }
+    a.forEach((num) => validateNumber(num));
     return a.reduce((sum, num) => sum + num, 0);
   }
 
-  validateNumber(a, 'add');
-  validateNumber(b, 'add');
+  validateNumber([a, b]);
   return a + (b as number);
 }
 

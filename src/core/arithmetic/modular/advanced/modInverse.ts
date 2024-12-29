@@ -1,3 +1,4 @@
+import { validateNumber } from '../../../../utils';
 import { modGCD } from './modGCD'; // Import the GCD function
 
 /**
@@ -8,6 +9,7 @@ import { modGCD } from './modGCD'; // Import the GCD function
  * @throws Error if the modular inverse does not exist
  */
 function modInverse(a: number, mod: number): number {
+  validateNumber([a, mod]);
   if (mod === 1) {
     return 0; // In modular arithmetic with mod = 1, any number's inverse is 0
   }

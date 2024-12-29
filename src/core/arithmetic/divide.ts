@@ -9,14 +9,14 @@ import { validateNumber } from '../../utils';
 function divide(a: number | number[], b?: number): number {
   if (Array.isArray(a)) {
     a.forEach((num) => {
-      validateNumber(num, 'divide');
+      validateNumber(num);
       if (num === 0) throw new Error('Division by zero in array is not allowed');
     });
     return a.reduce((result, num) => result / num);
   }
 
-  validateNumber(a, 'divide');
-  validateNumber(b, 'divide');
+  validateNumber(a);
+  validateNumber(b);
   if (b === 0) {
     throw new Error('Division by zero is not allowed');
   }

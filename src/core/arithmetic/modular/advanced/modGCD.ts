@@ -1,3 +1,5 @@
+import { validateNumber } from '../../../../utils';
+
 /**
  * Computes the greatest common divisor (GCD) of two numbers using the Euclidean algorithm.
  * Handles edge cases for negative numbers and zero values.
@@ -8,6 +10,7 @@
  * @throws Error if both numbers are 0 (undefined GCD).
  */
 function modGCD(a: number, b: number): number {
+  validateNumber([a, b]);
   if (a === 0 && b === 0) {
     throw new Error('GCD is undefined for a = 0 and b = 0');
   }

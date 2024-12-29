@@ -1,4 +1,5 @@
 import { modulo } from './modulo';
+import { validateNumber } from '../../../../utils';
 /**
  * Performs modular addition.
  * @param a - First number
@@ -7,6 +8,7 @@ import { modulo } from './modulo';
  * @returns Result of (a + b) % mod.
  */
 function modAdd(a: number, b: number, mod: number): number {
+  validateNumber([a, b, mod]);
   return modulo(a + b, mod);
 }
 

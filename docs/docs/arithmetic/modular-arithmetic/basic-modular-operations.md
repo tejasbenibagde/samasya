@@ -103,15 +103,6 @@ const result = new Chain(10)
 console.log(result); // Output: 9
 ```
 
-### Mixing Arrays and Numbers
-
-These functions can also handle arrays of numbers, allowing for batch processing.
-
-```typescript
-const arrayResult = modAdd([1, 2, 3], [4, 5, 6], 10); // Outputs: [5, 7, 9]
-console.log(arrayResult);
-```
-
 --- 
 
 ## Notes

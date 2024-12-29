@@ -12,6 +12,9 @@ import { modMultiply } from './modMultiply';
  * @throws Error if the modular inverse does not exist
  */
 function modDivide(a: number, b: number, mod: number): number {
+  if (b === 0) {
+    throw new Error('Division by zero is not allowed.');
+  }
   const bInverse = modInverse(b, mod);
   return modMultiply(a, bInverse, mod);
 }

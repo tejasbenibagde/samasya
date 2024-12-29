@@ -58,7 +58,7 @@ Each function accepts the following parameters:
 Efficiently compute powers under a modulus:
 
 ```typescript
-console.log(modExp(3, 5, 13)); // Output: 5 (since (3^5) % 13 = 5)
+console.log(modExp(3, 5, 13)); // Output: 9 (since (3^5) % 13 = 9)
 ```
 
 --- 
@@ -92,7 +92,7 @@ console.log(modRoot(10, 2, 7));
 
 ```typescript
 modExp("2", 3, 5); 
-// Throws: "Invalid input: all parameters must be numbers."
+// Throws: "Invalid input: must be a number."
 ```
 ---
 

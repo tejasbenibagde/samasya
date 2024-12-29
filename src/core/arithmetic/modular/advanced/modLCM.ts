@@ -1,3 +1,4 @@
+import { validateNumber } from '../../../../utils';
 import { modGCD } from './modGCD';
 
 /**
@@ -10,6 +11,8 @@ import { modGCD } from './modGCD';
  * @throws Error if `mod` is less than or equal to 0.
  */
 export function modLCM(a: number, b: number, mod: number): number {
+  validateNumber([a, b, mod]);
+
   if (mod <= 0) {
     throw new Error('Modulus must be greater than 0');
   }

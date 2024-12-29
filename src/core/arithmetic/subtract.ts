@@ -9,12 +9,11 @@ import { validateNumber } from '../../utils';
  */
 function subtract(a: number | number[], b?: number): number {
   if (Array.isArray(a)) {
-    a.forEach((num) => validateNumber(num, 'subtract'));
+    validateNumber(a);
     return a.reduce((result, num) => result - num);
   }
 
-  validateNumber(a, 'subtract');
-  validateNumber(b, 'subtract');
+  validateNumber([a, b]);
   return a - (b as number);
 }
 

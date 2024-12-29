@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2024-12-29
+
+### First Stable Version
+- Initial release of the package.
+- Added support for various data types.
+- Fixing various bugs and problems in the old functions
+- Added a detaild documentation for easy access to all the features of the package
+- Added a test suite to ensure the package works as expected.
+
+
 ## [1.1.0-beta.3] - 2024-12-08
 
 ### Added

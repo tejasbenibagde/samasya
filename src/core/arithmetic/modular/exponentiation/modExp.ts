@@ -1,5 +1,6 @@
 import { modulo } from '../basic/modulo';
 import { modMultiply } from '../';
+import { validateNumber } from '../../../../utils';
 
 /**
  * Performs modular exponentiation efficiently.
@@ -11,6 +12,7 @@ import { modMultiply } from '../';
  * @throws Error for invalid modulus values (mod <= 0).
  */
 function modExp(base: number, exp: number, mod: number): number {
+  validateNumber([base, exp, mod]);
   if (mod <= 0) {
     throw new Error('Modulus must be a positive integer.');
   }

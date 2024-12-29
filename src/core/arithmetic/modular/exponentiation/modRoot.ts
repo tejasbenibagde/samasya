@@ -1,3 +1,4 @@
+import { validateNumber } from '../../../../utils';
 import { modExp } from './modExp';
 /**
  * Finds modular roots of the equation x^n ≡ a (mod mod).
@@ -8,6 +9,7 @@ import { modExp } from './modExp';
  * @throws An error if no solutions exist or inputs are invalid.
  */
 export function modRoot(a: number, n: number, mod: number): number[] {
+  validateNumber([a, n, mod]);
   if (mod <= 0) {
     throw new Error('Modulus must be greater than 0');
   }

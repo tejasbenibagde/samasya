@@ -9,12 +9,11 @@ import { validateNumber } from '../../utils';
  */
 function multiply(a: number | number[], b?: number): number {
   if (Array.isArray(a)) {
-    a.forEach((num) => validateNumber(num, 'multiply'));
+    validateNumber(a);
     return a.reduce((product, num) => product * num, 1);
   }
 
-  validateNumber(a, 'multiply');
-  validateNumber(b, 'multiply');
+  validateNumber([a, b]);
   return a * (b as number);
 }
 
