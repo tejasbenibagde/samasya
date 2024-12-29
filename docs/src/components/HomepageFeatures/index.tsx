@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { JSX } from 'react';
 
 type FeatureItem = {
   title: string;
@@ -11,37 +12,37 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Simple API',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/simple_api.svg').default,
     description: (
       <>
-        Samasya provides a clean and intuitive API, making it easy to perform
-        mathematical calculations without hassle.
+        Samasya provides a clean and intuitive API, making it easy to perform mathematical
+        calculations without hassle.
       </>
     ),
   },
   {
     title: 'TypeScript Support',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/programming.svg').default,
     description: (
       <>
-        Designed with TypeScript, Samasya ensures type safety and autocomplete
-        to help you write robust code with confidence.
+        Designed with TypeScript, Samasya ensures type safety and autocomplete to help you write
+        robust code with confidence.
       </>
     ),
   },
   {
-    title: 'Extensive Features',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Open Source',
+    Svg: require('@site/static/img/opensource.svg').default,
     description: (
       <>
-        From basic arithmetic to advanced calculations, Samasya covers a wide
-        range of mathematical operations.
+        Samasya is open source, inviting contributions from the community and ensuring transparency
+        and collaborative development.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
