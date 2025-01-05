@@ -4,7 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.1.1] - 2024-01-01
+
+## [1.2.0] - 2025-01-04
+
+### Added
+
+- **Prime and Factorial Functions**:
+  - `modFactorial(n: number, mod: number): number`: Computes  `n!` mod `mod` \). Example: `modFactorial(5, 7) => 3` (since  `5! = 120`  and  `120 mod 7 = 3` ).
+
+- **Cryptography-Oriented Modular Functions**:
+  - `modularHash(data: string, mod: number): number`: Hashes a string using modular arithmetic.
+  - `modularEncryption(base: number, key: number, mod: number): number`: Encrypts a value using modular exponentiation.
+  - `modularDecryption(encrypted: number, key: number, mod: number): number`: Decrypts a value using modular arithmetic.
+
+
+## [1.1.1] - 2025-01-01
 
 ### Updated
 - Improved documentation for easier access to all features.
