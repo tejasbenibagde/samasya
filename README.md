@@ -8,7 +8,7 @@ samasya is a TypeScript-based mathematical library inspired by math.js, designed
 
 ## 📚 Documentation
 
-Explore the full documentation at [here](https://samasya-docs.netlify.app). It includes detailed usage examples, API references, and more.
+Explore the full documentation at **[https://samasya-docs.netlify.app](https://samasya-docs.netlify.app)**. It includes detailed usage examples, API references, and more.
 
 
 ## 🌟 Features
@@ -18,6 +18,11 @@ Explore the full documentation at [here](https://samasya-docs.netlify.app). It i
 - **Power and Root Calculations:** Compute powers and nth roots of numbers.
 - **Chaining Operations:** Chain multiple arithmetic operations in a fluent API style.
 - **Error Handling:** Comprehensive error handling for invalid inputs and edge cases.
+- **Algebraic Evaluator:** A new `Evaluator` class that supports algebraic expressions with variables, constants, and built-in functions (e.g., `sqrt`, `log`, `sin`, `cos`).
+- **Advanced Algebraic Operations:** Evaluate complex algebraic expressions dynamically with support for custom functions and variables.
+- **Cryptography-Oriented Functions:** Modular cryptographic functions such as modular hashing, encryption, and decryption.
+- **Prime and Factorial Functions:** Compute factorials with modulus, and enhance prime-related functionalities.
+
 
 ## 📦 Installation
 
