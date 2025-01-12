@@ -12,11 +12,6 @@
     "prepare": "husky install",
     "prepublishOnly": "npm run build && npm test"
   },
-  "keywords": [
-    "math",
-    "mathematics",
-    "typescript"
-  ],
   "author": "Tejas Benibagde",
   "license": "MIT",
   "repository": {
@@ -26,7 +21,14 @@
   "bugs": {
     "url": "https://github.com/tejasbenibagde/samasya/issues"
   },
-  "homepage": "https://github.com/tejasbenibagde/samasya#readme",
+  "homepage": "https://samasya-docs.netlify.app/",
+  "keywords": [
+    "arithmetic",
+    "math",
+    "mathematics",
+    "modulo",
+    "modulus"
+  ],
   "devDependencies": {
     "@types/jest": "^27.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
