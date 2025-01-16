@@ -15,8 +15,7 @@ This section covers advanced modular arithmetic operations, focusing on exponent
 
 1. `modExp(base: number, exp: number, mod: number): number`
 
-Efficiently calculates **(base<sup>exp</sup>) % mod** using **modular exponentiation** (e.g., repeated squaring).
-
+Efficiently calculates $(\text{base}^{\text{exp}}) \% \text{mod}$ using **modular exponentiation** (e.g., repeated squaring).
 - **Example**:
 ```typescript
 modExp(2, 10, 1000); // Output: 24 (since (2^10) % 1000 = 24)44

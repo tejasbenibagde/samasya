@@ -9,6 +9,17 @@ sidebar_label: Evaluator
 
 The `Evaluator` class is designed to evaluate mathematical expressions with support for variables and functions. It allows you to perform arithmetic operations, use mathematical constants, and define custom functions and variables for evaluation.
 
+:::tip Hands-On Example  
+
+Explore the [CLI Expression Evaluator Example](../examples/cli-expression-evaluator.md) to see how the `Evaluator` class can be used in a real-world project.  
+
+This example provides step-by-step guidance for practical implementation.  
+
+[View the Example](../examples/cli-expression-evaluator.md)  
+:::
+
+---
+
 ## Features
 
 - Evaluate mathematical expressions with variables and functions.
