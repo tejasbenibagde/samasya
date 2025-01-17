@@ -23,3 +23,4 @@
 export * from './chaining';
 export * from './arithmetic';
 export * from './algebra';
+export * from './constructs';

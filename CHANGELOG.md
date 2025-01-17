@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.4.0] - Upcoming
+### Added
+- **Number Constructs**:\
+Introducing two powerful new constructs designed to handle advanced numerical operations with precision and efficiency:
+  - `BigNumber`:
+    - A class built on top of Decimal.js to address common floating-point precision issues.
+    - Supports arithmetic operations like addition, subtraction, multiplication, and division with complete precision.
+    - Handles large numbers and operations seamlessly without precision loss.
+    - Added utility methods for comparisons (isGreaterThan, isLessThan, isEqualTo).
+  - `BigInt`:
+    - A custom implementation leveraging native JavaScript BigInt for operations on integers of arbitrary size.
+    - Supports arithmetic and comparison operations tailored for big integers.
+    - Ensures compatibility with environments targeting ES2020 or higher.
+
 ## [1.3.0] - 2025-01-12
 
 ### Added
