@@ -13,15 +13,28 @@ Explore the full documentation at **[https://samasya-docs.netlify.app](https://s
 
 ## 🌟 Features
 
-- **Basic Arithmetic Operations:** Addition, subtraction, multiplication, and division for both numbers and arrays.
-- **Modular Arithmetic Operations:** Operations such as modulo, modular addition, subtraction, multiplication, exponentiation, and more.
-- **Power and Root Calculations:** Compute powers and nth roots of numbers.
-- **Chaining Operations:** Chain multiple arithmetic operations in a fluent API style.
-- **Error Handling:** Comprehensive error handling for invalid inputs and edge cases.
-- **Algebraic Evaluator:** A new `Evaluator` class that supports algebraic expressions with variables, constants, and built-in functions (e.g., `sqrt`, `log`, `sin`, `cos`).
-- **Advanced Algebraic Operations:** Evaluate complex algebraic expressions dynamically with support for custom functions and variables.
-- **Cryptography-Oriented Functions:** Modular cryptographic functions such as modular hashing, encryption, and decryption.
-- **Prime and Factorial Functions:** Compute factorials with modulus, and enhance prime-related functionalities.
+### Core Arithmetic Operations
+- **Basic Arithmetic**: Addition, subtraction, multiplication, and division for both numbers and arrays.
+- **Modular Arithmetic**: Operations such as modulo, modular addition, subtraction, multiplication, and exponentiation.
+
+### Advanced Mathematical Capabilities
+- **Power and Root Calculations**: Compute powers and nth roots of numbers.
+- **Prime and Factorial Functions**: Compute factorials with modulus and enhance prime-related functionalities.
+
+### Algebraic and Expression Evaluation
+- **Algebraic Evaluator**: A new `Evaluator` class that supports algebraic expressions with variables, constants, and built-in functions (e.g., `sqrt`, `log`, `sin`, `cos`).
+- **Chaining Operations**: Chain multiple arithmetic operations in a fluent API style.
+- **Dynamic Expressions**: Evaluate complex algebraic expressions dynamically, with support for custom functions and variables.
+
+### Cryptography-Oriented Features
+- **Modular Cryptographic Functions**: Perform modular hashing, encryption, and decryption.
+
+### High-Precision and Big Numbers
+- **BigNumber**: Built on [Decimal.js](https://mikemcl.github.io/decimal.js/) for handling large floating-point numbers with complete precision.
+- **BigInt**: A custom implementation leveraging JavaScript's native `BigInt` for arbitrary-sized integer operations.
+
+### Robust Design
+- **Error Handling**: Comprehensive error handling for invalid inputs and edge cases.
 
 
 ## 📦 Installation
